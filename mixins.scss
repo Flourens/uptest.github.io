@@ -1,0 +1,74 @@
+
+@import "include-media/dist/_include-media.scss";
+
+$breakpoints: (
+    "smallPhone": 440px,
+    "phone": 768px,
+    "smallTablet": 1024px,
+    "tablet": 1280px,
+    "desktop": 1360px,
+    "mediumDesktop": 1600px,
+    "largeDesktop": 1920px,
+    "xlargeDesktop": 2560px,
+    "minHeight": 700px,
+    "xHeight": 630px,
+);
+@mixin microphone {
+  @media (min-width: #{microphone}) {
+    @content;
+  }
+}
+
+@mixin miniphone {
+  @media (min-width: #{miniphone}) {
+    @content;
+  }
+}
+
+@mixin mphone {
+  @media (min-width: #{mphone}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (min-width: #{phone}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{tablet}) {
+    @content;
+  }
+}
+
+@mixin mdesktop {
+  @media (min-width: #{mdesktop}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{desktop}) {
+    @content;
+  }
+}
+
+@mixin bdesktop {
+  @media (min-width: #{bdesktop}) {
+    @content;
+  }
+}
+
+@mixin largeDesktop {
+  @media (min-width: #{largeDesktop}) {
+    @content;
+  }
+}
+
+@mixin xlargeDesktop {
+  @media (min-width: #{xlargeDesktop}) {
+    @content;
+  }
+}
