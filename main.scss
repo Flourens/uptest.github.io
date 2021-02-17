@@ -31,6 +31,13 @@ body{
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.25);
+    @include media ("<=tablet") {
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 0px;
+    }
 }
 .main-nav{
     width: 100%;
@@ -59,29 +66,43 @@ body{
         margin: 0px 0px 0px 12px;
     }
 }
-
+.main-nav__menu{
+    width: calc( 100% - 150px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    @include media ("<=tablet"){ 
+        display: none;
+        background-color: #fff;
+        height: calc(100vh - 60px);
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+    }
+    &--open{
+        display: flex;
+    }
+}
 .main-nav__list{
     list-style-type: none;
-    margin: 0 0 0 20px;
+    margin: 0 157px 0 20px;
     padding: 0;
 
-    // @include media ("<desktop"){
-    //     display: none;
-    //     position: fixed;
-    //     justify-content: space-between;
-    //     top: 0;
-    //     right: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     flex-direction: column;
-    //     padding: 0;
-    //     padding-top: 130px;
-    //     padding-bottom: 20vh;
-    // }
-    // &--open{
-    //     display: block;
-    // }
+    @include media ("<=tablet"){ 
+        margin: 0;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 10%;
+    }
+
 }
 .main-nav__list-item{
     font-family: 'Kumbh Sans', sans-serif;
@@ -97,8 +118,17 @@ body{
     &:hover{
         color: #4730D2;
     }
+    @include media ("<=tablet"){
+        display: block;
+        font-size: 32px;
+        text-align: center;
+    }
 }
 .main-nav__demo-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: auto;
     display: block;
     height: 100%;
     font-family: 'Kumbh Sans', sans-serif;
@@ -113,6 +143,13 @@ body{
     text-decoration: none;
     align-self: flex-end;
     padding: 19px 24px 17px 24px;
+    @include media ("<=tablet"){
+        text-align: center;
+        position: relative;
+        height: 75px;
+        width: 100%;
+        font-size: 32px;
+    }
 }
 
 // Menu burger
@@ -120,61 +157,62 @@ body{
     display: none;
     position: absolute;
     top: 50%;
-    left: 20px;
-    width: 24px;
-    height: 12px;
+    right: 0px;
+    width: 60px;
+    height: 60px;
     transform: translate(0, -50%);
     transition: 0.5s ease-in-out;
     cursor: pointer;
     z-index: 1500;
-    @include media ("<desktop") {
+    background-color: #4730D2;
+    @include media ("<=tablet") {
         display: block;
     }
     > span {
       display: block;
       position: absolute;
       height: 2px;
-      width: 100%;
-      background: #000;
+      width: 40px;
+      background: #fff;
       border-radius: 2px;
       opacity: 1;
-      left: 0;
+      left: 10px;
+      top: 0;
       transform: rotate(0deg);
       transition: 0.25s ease-in-out;
 
       &:nth-child(1) {
-        top: 0px;
+        top: 19px;
       }
 
       &:nth-child(2) {
-        top: 6px;
+        top: 29px;
       }
 
       &:nth-child(3) {
-        top: 12px;
+        top: 39px;
       }
     }
 
-    &.open > span {
-      background-color: #000;
+    &.open {
+        background-color: #fff;
+        > span {
+            background-color: #4730D2;
+            &:nth-child(1) {
+                top: 30px;
+                transform: rotate(135deg);
+            }
 
-      &:nth-child(1) {
-        top: 6px;
-        transform: rotate(135deg);
-      }
+            &:nth-child(2) {
+                opacity: 0;
+                right: -100%;
+            }
 
-      &:nth-child(2) {
-        opacity: 0;
-        left: -100%;
-      }
-
-      &:nth-child(3) {
-        top: 6px;
-        transform: rotate(-135deg);
-      }
-    }
-    @include media(">largeDesktop") {
-      top: 110px;
+            &:nth-child(3) {
+                top: 30px;
+                transform: rotate(-135deg);
+            }
+        }
     }
 }
 
@@ -218,12 +256,18 @@ body{
         font-size: 48px; 
         font-weight: bold;
         text-shadow: 0px 4px 12px rgba(31, 21, 91, 0.2);
+        @include media ("<=smallTablet"){
+            font-size: 36px;
+            margin-left: 16px;
+            margin-right: 16px;
+        }
     }
     &--h3{
         font-size: 16px;
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 1px;
+        line-height: 1.2;
     }
 }
 
@@ -273,6 +317,12 @@ body{
             margin: 0 auto;
             border-radius: 48px;
             box-shadow: 0px 7px 12px 0px rgba(0,0,0,0.1);
+            @include media ("<=tablet"){
+                max-width: 980px;
+            }
+            @include media ("<=smallTablet"){
+                border-radius: 0px;
+             }
         }
         .section__title{
             font-size: 48px;
@@ -289,6 +339,17 @@ body{
     &--big{
         max-width: 1161px;
         padding: 1px;
+    }
+    @include media ("<=tablet"){
+        max-width: 920px;
+        &--big{
+            max-width: 980px;
+        }
+    }
+    @include media ("<=smallTablet"){
+        max-width: calc(100% - 32px);
+        margin-left: 16px;
+        margin-right: 16px;
     }
 }
 .section__main-sub{
@@ -352,6 +413,9 @@ body{
     &--blue{
         color: #1F155B;
     }
+    @include media ("<=smallTablet"){
+        font-size: 48px;
+    }
 }
 .section__sub-title{
     font-family: 'Kumbh Sans', sans-serif;
@@ -369,6 +433,7 @@ body{
         color: #6F6C82;
         max-width: 640px;
     }
+    
 }
 .section__pre-title{
     font-family: 'Kumbh Sans', sans-serif;
@@ -376,18 +441,30 @@ body{
     text-align: center;
     color: rgba(255, 255, 255, 0.48);
     font-size: 16px;
-    line-height: 1;
+    line-height: 1.2;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0;
     padding-top: 38px;
+    @include media ("<=smallTablet"){
+        max-width: 220px;
+        margin: 0 auto;
+    }
 }
 .sub__list{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 100px;
+    @include media ("<=smallTablet"){
+        flex-direction: column;
+    }
+}
+.sub__list-item{
+    @include media ("<=smallTablet"){
+        margin-bottom: 50px;
+    }
 }
 .sub__list-icon{
     position: relative;
@@ -412,12 +489,18 @@ body{
         width: 192px;
         height: 172px;
         left: 18px;
+        @include media ("<=smallTablet"){
+            left: 0;
+        }
     }
     &--2{
         bottom: 22px;
         left: 57px;
         width: 192px;
         height: 172px;
+        @include media ("<=smallTablet"){
+            left: 40px;
+        }
     }
     &--3{
         width: 165px;
@@ -433,12 +516,18 @@ body{
         left: -5px;
         width: 160px;
         height: 160px;
+        @include media ("<=smallTablet"){
+            left: 0px;
+        }
     }
     &--6{
         bottom: 25px;
         left: 20px;
         width: 160px;
         height: 160px;
+        @include media ("<=smallTablet"){
+            left: 25px;
+        }
     }
 }
 .sub__list-title{
@@ -450,6 +539,9 @@ body{
     line-height: 1.2;
     font-weight: bold;
     margin: 5px 0;
+    @include media ("<=smallTablet"){
+        font-size: 32px;
+    }
 }
 .sub__list-text{
     font-family: 'Kumbh Sans', sans-serif;
@@ -460,7 +552,11 @@ body{
     line-height: 1.3;
     font-weight: 400;
     max-width: 270px;
-    margin: 0;
+    margin: 0 auto;
+    display: block;
+    @include media ("<=smallTablet"){
+        max-width: 100%;
+    }
 }
 .demo-btn{
     background-color: #fff;
@@ -480,6 +576,10 @@ body{
     width: 360px;
     display: block;
     margin-top: 105px;
+    @include media ("<=smallTablet"){
+        width: 336px;
+        margin-top: 50px;
+    }
 }
 .section__sub{
     padding-top: 140px;
@@ -492,9 +592,6 @@ body{
     justify-content: space-between;
     margin: 20px 20px 0px 20px;
     &--reflected{
-        .two-column__info{
-            order: 2;
-        }
         .two-column__img{
             order: 1;
         }
@@ -504,17 +601,41 @@ body{
         .two-column__info{
             padding-left: 0px;
             padding-right: 45px;
+            order: 2;
         }
         .index{
             left: auto;
             right: 0;
         }
+        @include media ("<=smallTablet"){
+            p{
+                text-align: left;
+            }
+            .two-column__info{
+                padding-right: 0px;
+            }
+            .index{
+                left: 0;
+                right: auto;
+            }
+        }
+    }
+    @include media ("<=smallTablet"){
+        flex-direction: column;
     }
 }
 .two-column__info{
     padding-left: 45px;
     max-width: 505px;
     position: relative;
+    @include media ("<=smallTablet"){
+        padding-left: 0;
+        padding-top: 25px;
+        order: 2;
+        max-width: 100%;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
 }
 .two-column__info-title{
     font-family: 'Kumbh Sans', sans-serif;
@@ -525,6 +646,9 @@ body{
     line-height: 1.2;
     font-weight: bold;
     margin: 0;
+    @include media ("<=smallTablet"){
+        font-size: 32px;
+    }
 }
 .two-column__info-text{
     font-family: 'Kumbh Sans', sans-serif;
@@ -538,6 +662,7 @@ body{
     margin-top: 15px;
 }
 .two-column__img{
+
     &--1{
         width: 348px;
         margin-right: 70px;
@@ -584,6 +709,12 @@ body{
         width: 100%;
         height: auto;
     }
+    @include media ("<=smallTablet"){
+        width: 336px;
+        margin-left: 0;
+        margin-right: 0;
+        order: 1;
+    }
 }
 .index{
     font-family: 'Kumbh Sans', sans-serif;
@@ -603,6 +734,9 @@ body{
     }
     &--blue{
         color: #7BAAF1;
+    }
+    @include media ("<=smallTablet"){
+        top: 0;
     }
 }
 .sub-nav{
@@ -714,21 +848,26 @@ body{
         }
     }
 }
-.table-fpo{
+.overflow{
     width: 100%;
-    max-width: 1160px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 60px;
-    margin-bottom: -150px;
+    @include media ("<=smallTablet"){
+        overflow-x: hidden;
+        overflow-y: visible;
+        position: absolute;
+        height: 400px;
+        top: 0;
+        left: 0;
+    }
 }
-
 .table{
     width: 100%;
     display: block;
     margin: 0 auto;
     margin-top: 60px;
     margin-bottom: -120px;
+    @include media ("<=smallTablet"){
+        width: 980px;
+    }
 }
 .table-1{
     width: 100%;
@@ -957,6 +1096,17 @@ body{
     width: 292px;
     height: 260px;
     z-index: 2;
+    @include media ("<=tablet"){
+        left: 2%;
+        width: 242px;
+        height: 210px;
+    }
+    @include media ("<=smallTablet"){
+        left: -70px;
+        width: 145px;
+        height: 130px;
+        top: -30px;
+    }
 }
 .fig-2{
     position: absolute;
@@ -965,6 +1115,16 @@ body{
     width: 132px;
     height: 117px;
     z-index: 2;
+    @include media ("<=tablet"){
+        width: 112px;
+        height: 97px;
+        top: 140px;
+    }
+    @include media ("<=smallTablet"){
+        width: 66px;
+        height: 58px;
+        top: 120px;
+    }
 }
 .fig-3{
     position: absolute;
@@ -973,6 +1133,17 @@ body{
     width: 405px;
     height: 360px;
     z-index: 2;
+    @include media ("<=tablet"){
+        right: 1%;
+        width: 325px;
+        height: 280px;
+    }
+    @include media ("<=smallTablet"){
+        right: -90px;
+        top: 30px;
+        width: 201px;
+        height: 180px;
+    }
 }
 .fig-4{
     position: absolute;
@@ -981,6 +1152,16 @@ body{
     width: 113px;
     height: 94px;
     z-index: 2;
+    @include media ("<=tablet"){
+        left: 7%;
+        top: 65px;
+    }
+    @include media ("<=smallTablet"){
+        top: 13px;
+        left: 7%;
+        width: 73px;
+        height: auto;
+    }
 }
 .fig-5{
     position: absolute;
@@ -989,14 +1170,29 @@ body{
     width: 60px;
     height: 84px;
     z-index: 2;
+    @include media ("<=tablet"){
+        right: 7%;
+    }
+    @include media ("<=smallTablet"){
+        top: 145px;
+        right: 5%;
+        width: 35px;
+        height: auto;
+    }
 }
 .fig-6{
     position: absolute;
     top: -30px;
     right: 8%;
-    width: 193.56px;
+    width: 193px;
     height: 100px;
     z-index: 2;
+    @include media ("<=smallTablet"){
+        top: -20px;
+        right: 3%;
+        width: 103px;
+        height: auto;
+    }
 }
 .fig-7{
     position: absolute;
@@ -1005,12 +1201,44 @@ body{
     width: 137px;
     height: 124px;
     z-index: 2;
+    @include media ("<=tablet"){
+        left: 6%;
+    }
+    @include media ("<=smallTablet"){
+        top: 30px;
+        left: 1%;
+        width: 97px;
+        height: 84px;
+    }
 }
 .three-column{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 160px;
+    &--line-2{
+        margin-top: 0;
+        .three-column__item{
+            &--2{
+                &:before{
+                    display: none;
+                }
+                &:after{
+                    display: none;
+                }
+            }
+            @include media ("<=smallTablet"){
+                margin-bottom: 0;
+            }
+        }
+
+    }
+    @include media ("<=tablet"){
+        margin-top: 70px;
+    }
+    @include media ("<=smallTablet"){
+        flex-direction: column;
+    }
 }
 .three-column__item{
     width: 33.33%;
@@ -1052,6 +1280,21 @@ body{
             color: #7BAAF1;
         }
     }
+    @include media ("<=smallTablet"){
+        width: 100%;
+        margin-bottom: 100px;
+        &--2{
+            &:before{
+                display: none;
+            }
+            &:after{
+                display: none;
+            }
+        }
+        &--3{
+            margin-bottom: 0;
+        }
+    }
 }
 .three-column__text{
     font-family: 'Kumbh Sans', sans-serif;
@@ -1087,6 +1330,9 @@ body{
             
         }
     }
+    @include media ("<=smallTablet"){
+        min-height: 95px;
+    }
 }
 .three-column__profit{
     border: 1px solid rgba(31, 21, 91, 0.04);
@@ -1097,6 +1343,15 @@ body{
     margin: 0px 5%;
     padding: 37px 0px 30px 0px;
     margin-top: 55px;
+    @include media ("<=smallTablet"){
+       max-width: 380px;
+       margin: 0 auto;
+       margin-top: 30px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-around;
+    }
 }
 .three-column__profit-num{
     font-family: 'Kumbh Sans', sans-serif;
@@ -1118,6 +1373,10 @@ body{
     color: #1F155B;
     margin: 0;
     margin-top: 10px;
+    @include media ("<=tablet"){
+        font-size: 22px;
+        margin-top: 0;
+    }
 }
 .title-img{
     width: 100%;
@@ -1126,24 +1385,44 @@ body{
     height: auto;
     margin: 0 auto;
     margin-top: 56px;
+    @include media ("<=smallTablet"){
+        margin-top: 20px;
+    }
 }
 .infograph{
     position: relative;
     width: 100%;
-    margin-bottom: 223px;
-    margin-top: 60px;
+    margin: 60px auto 203px auto;
+    max-width: 1110px;
+    @include media ("<=tablet"){
+        max-width: 920px;
+    }
+    @include media ("<=smallTablet"){
+        max-width: 336px;
+        margin: 60px auto 103px auto;
+    }
 }
 .infograph__img-1{
-    width: 100%;
+    width: calc(100% - 30px);
     height: auto;
+    margin-left: 30px;
+    @include media ("<=smallTablet"){
+        margin-left: 0;
+        width: 100%;
+    }
 }
 .infograph__img-2{
     position: absolute;
-    top: -150px;
-    left: 0;
+    top: -138px;
+    left: 30px;
     right: 0;
-    width: 100%;
+    width: calc(100% - 30px);
     height: auto;
+    @include media ("<=smallTablet"){
+        left: 0;
+        width: 100%;
+        top: -45px;
+    }
 }
 .clients{
     display: flex;
@@ -1152,6 +1431,12 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 40px;
+    @include media ("<=smallTablet"){
+        justify-content: space-around;
+        max-width: 380px;
+        margin: 0 auto; 
+        margin-top: 40px;
+     }
 }
 .clients__img{
     margin-top: 20px;
@@ -1163,6 +1448,22 @@ body{
     &:nth-child(6n){
         margin-left: 0px;
     }
+    @include media ("<=tablet"){
+        &:nth-child(6n){
+            margin-left: 80px;
+        }
+        &:nth-child(5n){
+            margin-left: 0px;
+        }
+    }
+    @include media ("<=smallTablet"){
+        width: 50%;
+        margin-left: 0;
+        &:nth-child(6n){
+            margin-left: 0px;
+        }
+    }
+
     &--1{
         width: 116px;
         height: 64px;
@@ -1182,6 +1483,9 @@ body{
     &--5{
         width: 184px;
         height: 38px;
+        @include media ("<=smallTablet"){
+           width: 154px;
+        }
     }
     &--6{
         width: 188px;
@@ -1202,6 +1506,13 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @include media ("<=tablet"){
+        max-width: 860px;
+    }
+    @include media ("<=smallTablet"){
+        flex-direction: column;
+        max-width: 380px;
+    }
 }
 .form__input{
     display: inline-block;
@@ -1220,6 +1531,10 @@ body{
         line-height: 24px;
         color: #fff;
     }
+    @include media ("<=smallTablet"){
+       width: 100%;
+       margin-bottom: 25px;
+    }
 }
 .form__submit{
     width: 160px;
@@ -1234,6 +1549,9 @@ body{
     line-height: 24px;
     color: #4730D2;
     border: 1px solid #FFFFFF;
+    @include media ("<=smallTablet"){
+        width: 100%;
+     }
 }
 .footer{
     width: 100%;
@@ -1244,6 +1562,11 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @include media ("<=smallTablet"){
+        flex-direction: column;
+        max-width: 380px;
+        margin: 0 auto;
+    }
 }
 .footer__text{
     font-family: 'Kumbh Sans', sans-serif;
@@ -1253,6 +1576,16 @@ body{
     line-height: 32px;
     color: #B2AFBF;
     margin: 0;
+    &--made{
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+.footer__col-left{
+    @include media ("<=smallTablet"){
+        order: 2;
+    }
 }
 .footer__col-right{
     display: flex;
@@ -1260,6 +1593,11 @@ body{
     justify-content: space-between;
     max-width: 510px;
     width: 100%;
+    @include media ("<=smallTablet"){
+        order: 1;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
 }
 .footer__nav{
     font-family: 'Kumbh Sans', sans-serif;
@@ -1269,4 +1607,7 @@ body{
     line-height: 32px;
     color: #1F155B;
     text-decoration: none;
+    @include media ("<=smallTablet"){
+        font-size: 19px;
+    }
 }

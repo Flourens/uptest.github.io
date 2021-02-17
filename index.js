@@ -2,9 +2,9 @@
 
 $(window).on('load',function(){
 
-    $( ".burger" ).on( "click", function(){
+    $( ".main-nav__burger" ).on( "click", function(){
         $(this).toggleClass('open')
-        $(".main-nav__list").toggleClass('main-nav__list--open')
+        $(".main-nav__menu").toggleClass('main-nav__menu--open')
     });
 
     $(".bottles__item").hover(
