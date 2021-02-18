@@ -12,20 +12,23 @@
 
     <div class="header">
         <div class="main-nav">
-            <div class="main-nav__logo">
-                <img src="./assets/img/logo.svg" alt="" class="main-nav__logo--img">
-                <p class="main-nav__logo--text">equals five</p>
-            </div>
+            <a href="#hero" class="main-nav__link">
+                <div class="main-nav__logo">
+                    <img src="./assets/img/logo.svg" alt="" class="main-nav__logo--img">
+                    <p class="main-nav__logo--text">equals five</p>
+                </div>
+            </a>
             <div class="main-nav__menu">
                 <ul class="main-nav__list">
-                    <li class="main-nav__list-item">introduction</li>
-                    <li class="main-nav__list-item">solutions</li>
-                    <li class="main-nav__list-item">benefits & results</li>
-                    <li class="main-nav__list-item">about us</li>
-                    <li class="main-nav__list-item">clients</li>
+                    <li class="main-nav__list-item"><a href="#introduction">introduction</a></li>
+                    <li class="main-nav__list-item"><a href="#solutions">solutions</a></li>
+                    <li class="main-nav__list-item"><a href="#benefits">benefits & results</a></li>
+                    <li class="main-nav__list-item"><a href="#about">about us</a></li>
+                    <li class="main-nav__list-item"><a href="#clients">clients</a></li>
                 </ul>
                 <a href="javascript:void(0);" class="main-nav__demo-btn">Get a demo</a>
             </div>
+            <a href=""></a>
             <div class="main-nav__burger">
                 <span></span>
                 <span></span>
@@ -36,14 +39,14 @@
 
     <div class="page">
 
-        <div class="hero">
+        <div class="hero" id="hero">
             <div class="hero__title">
                 <h1 class="hero__title-text hero__title-text--h3">equals five — pharma <nobr>marketing platform</nobr></h1>
                 <h3 class="hero__title-text hero__title-text--h1">Doctors are people too! Our platform will help you reach them where they spend most of their time – on Social Media</h3>
             </div>
         </div>
 
-        <div class="section section--1">
+        <div class="section section--1" id="introduction">
             <div class="section__main-sub">
                 <div class="gradient">
                     <img src="./assets/img/gradient-bg.png" alt="" class="gradient__img gradient__img--1">
@@ -206,7 +209,7 @@
 
         </div>
 
-        <div class="section section--2">
+        <div class="section section--2" id="solutions">
             <div class="section__main-sub">
                 <div class="gradient">
                     <img src="./assets/img/gradient-bg.png" alt="" class="gradient__img gradient__img--2">
@@ -220,13 +223,14 @@
                     <div class="content_width content_width--big">
                         <h4 class="section__pre-title">Bring all your <nobr>work together</nobr></h4>
                         <h2 class="section__title">Solutions</h2>
+                    </div>
                         <div class="table">
                             <div class="table-1">
                                 <div class="table-1__left">
                                     <div class="table-1__text">By:</div>
-                                    <div class="table-1__btns">
-                                        <span class="table-1__btn table-1__btn--active">Marketing Phase</span>
-                                        <span class="table-1__btn">HCP Journey</span>
+                                    <div class="table-1__btns table-1__btns">
+                                        <span class="table-1__btn">Marketing Phase</span>
+                                        <span class="table-1__btn table-1__btn--active">HCP Journey</span>
                                         <span class="table-1__btn">Objective</span>
                                     </div>
                                 </div>
@@ -235,84 +239,88 @@
                                     <p class="table-1__descr table-1__descr--blue">Unbranded</p>
                                 </div>
                             </div>
-
-                            <div class="table-2">
-                                <div class="table-2__head">
-                                    <div class="table-2__head-icon">
-                                        <img src="./assets/img/table-icon-1.svg" alt="">
-                                    </div>
-                                    <p class="table-2__head-text table-2__head-text--1">Market Prim</p>
-                                    <p class="table-2__head-text table-2__head-text--2">Pre-launch</p>
-                                    <p class="table-2__head-text table-2__head-text--3">Launch</p>
-                                    <p class="table-2__head-text table-2__head-text--4">Post-launch</p>
-                                    <p class="table-2__head-text table-2__head-text--5">Widthdraval</p>
-                                    <div class="table-2__head-icon">
-                                        <img src="./assets/img/table-icon-2.svg" alt="">
+                            <div class="table-2__wrapp">
+                                <div class="table-2__margin">
+                                    <div class="table-2">
+                                        <div class="table-2__head">
+                                            <div class="table-2__head-icon">
+                                                <img src="./assets/img/table-icon-1.svg" alt="">
+                                            </div>
+                                            <p class="table-2__head-text table-2__head-text--1">Market Prim</p>
+                                            <p class="table-2__head-text table-2__head-text--2">Pre-launch</p>
+                                            <p class="table-2__head-text table-2__head-text--3">Launch</p>
+                                            <p class="table-2__head-text table-2__head-text--4">Post-launch</p>
+                                            <p class="table-2__head-text table-2__head-text--5">Widthdraval</p>
+                                            <div class="table-2__head-icon">
+                                                <img src="./assets/img/table-icon-2.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="table-2__line">
+                                            <p class="table-2__text">Alerts</p>
+                                            <div class="table-2__check">
+                                                <img src="./assets/img/check-blue.svg" alt="">
+                                            </div>
+                                            <div class="table-2__check">
+                                                <img src="./assets/img/check-green-blue.svg" alt="">
+                                            </div>
+                                            <div class="table-2__check">
+                                                
+                                            </div>
+                                            <div class="table-2__check">
+                                                
+                                            </div>
+                                            <div class="table-2__check">
+                                                <img src="./assets/img/check-green-blue.svg" alt="">
+                                            </div>
+                                            <div class="table-2__check"></div>
+                                        </div>
+                                        <div class="table-2__line">
+                                            <p class="table-2__text">Cases</p>
+                                            <div class="table-2__check">
+                                                <img src="./assets/img/check-green-blue.svg" alt="">
+                                            </div>
+                                            <div class="table-2__check">
+                                                <img src="./assets/img/check-green-blue.svg" alt="">
+                                            </div>
+                                            <div class="table-2__check">
+                                                <img src="./assets/img/check-green.svg" alt="">
+                                            </div>
+                                            <div class="table-2__check">
+                                                <img src="./assets/img/check-green.svg" alt="">
+                                            </div>
+                                            <div class="table-2__check">
+                                                <img src="./assets/img/check-green.svg" alt="">
+                                            </div>
+                                            <div class="table-2__check"></div>
+                                        </div>
+                                        <div class="table-2__line">
+                                            <p class="table-2__text">Promotion</p>
+                                            <div class="table-2__check">
+                                            </div>
+                                            <div class="table-2__check">
+                                                <img src="./assets/img/check-blue.svg" alt="">
+                                            </div>
+                                            <div class="table-2__check">
+                                                <img src="./assets/img/check-green-blue.svg" alt="">
+                                            </div>
+                                            <div class="table-2__check">
+                                                <img src="./assets/img/check-green-blue.svg" alt="">
+                                            </div>
+                                            <div class="table-2__check">
+                                            </div>
+                                            <div class="table-2__check"></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="table-2__line">
-                                    <p class="table-2__text">Alerts</p>
-                                    <div class="table-2__check">
-                                        <img src="./assets/img/check-blue.svg" alt="">
-                                    </div>
-                                    <div class="table-2__check">
-                                        <img src="./assets/img/check-green-blue.svg" alt="">
-                                    </div>
-                                    <div class="table-2__check">
-                                        
-                                    </div>
-                                    <div class="table-2__check">
-                                        
-                                    </div>
-                                    <div class="table-2__check">
-                                        <img src="./assets/img/check-green-blue.svg" alt="">
-                                    </div>
-                                    <div class="table-2__check"></div>
-                                </div>
-                                <div class="table-2__line">
-                                    <p class="table-2__text">Cases</p>
-                                    <div class="table-2__check">
-                                        <img src="./assets/img/check-green-blue.svg" alt="">
-                                    </div>
-                                    <div class="table-2__check">
-                                        <img src="./assets/img/check-green-blue.svg" alt="">
-                                    </div>
-                                    <div class="table-2__check">
-                                        <img src="./assets/img/check-green.svg" alt="">
-                                    </div>
-                                    <div class="table-2__check">
-                                        <img src="./assets/img/check-green.svg" alt="">
-                                    </div>
-                                    <div class="table-2__check">
-                                        <img src="./assets/img/check-green.svg" alt="">
-                                    </div>
-                                    <div class="table-2__check"></div>
-                                </div>
-                                <div class="table-2__line">
-                                    <p class="table-2__text">Promotion</p>
-                                    <div class="table-2__check">
-                                    </div>
-                                    <div class="table-2__check">
-                                        <img src="./assets/img/check-blue.svg" alt="">
-                                    </div>
-                                    <div class="table-2__check">
-                                        <img src="./assets/img/check-green-blue.svg" alt="">
-                                    </div>
-                                    <div class="table-2__check">
-                                        <img src="./assets/img/check-green-blue.svg" alt="">
-                                    </div>
-                                    <div class="table-2__check">
-                                    </div>
-                                    <div class="table-2__check"></div>
-                                </div>
+                                
                             </div>
                         </div>
 
-                </div>
+
             </div>
         </div>
 
-        <div class="section section--3">
+        <div class="section section--3" id="benefits">
             <div class="content_width content_width--big">
                 <h2 class="section__title section__title--blue">Benefits & results</h2>
                 <div class="three-column">
@@ -355,7 +363,7 @@
             </div>
         </div>
 
-        <div class="section section--4">
+        <div class="section section--4" id="about">
             <div class="section__main-sub">
                 <img src="./assets/img/fig-4.png" alt="" class="fig-4">
                 <img src="./assets/img/fig-5.png" alt="" class="fig-5">
@@ -373,7 +381,7 @@
             </div>
         </div>
 
-        <div class="section section--5">
+        <div class="section section--5" id="clients">
             <div class="content_width">
                 <h2 class="section__title section__title--blue">Clients</h2>
                 <div class="clients">
