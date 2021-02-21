@@ -6,7 +6,12 @@
   "author": "ecgeniy",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "build": "parcel build index.html",
+    "serve": "parcel index.html"
+  },
   "devDependencies": {
+    "@babel/core": "^7.0.0",
     "@parcel/transformer-css": "^2.0.0-alpha.3",
     "@parcel/transformer-html": "2.0.0-nightly.598",
     "@parcel/transformer-postcss": "^2.0.0-alpha.3",
@@ -16,6 +21,8 @@
     "sass": "^1.29.0"
   },
   "dependencies": {
-    "include-media": "^1.4.9"
+    "gsap": "^3.6.0",
+    "include-media": "^1.4.9",
+    "scrollmagic": "^2.0.8"
   }
 }

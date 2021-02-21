@@ -29,7 +29,7 @@
                     <li class="main-nav__list-item"><a href="#about">about us</a></li>
                     <li class="main-nav__list-item"><a href="#clients">clients</a></li>
                 </ul>
-                <a href="javascript:void(0);" class="main-nav__demo-btn">Get a demo</a>
+                <a href="#demo-section" class="main-nav__demo-btn">Get a demo</a>
             </div>
             <a href=""></a>
             <div class="main-nav__burger">
@@ -55,30 +55,30 @@
                     <img src="./assets/img/gradient-bg.png" alt="" class="gradient__img gradient__img--1">
                 </div>
                 <div class="sub-nav">
-                    <div class="sub-nav__icon active">
+                    <a href="#subsection-1" class="sub-nav__icon sub-nav__icon--1">
                         <img src="./assets/img/nav-icon-3-grey.png" alt="" class="sub-nav__icon-img-1">
                         <img src="./assets/img/nav-icon-3-color.png" alt="" class="sub-nav__icon-img-2">
                         <img src="./assets/img/nav-icon-3-top.svg" alt="" class="sub-nav__icon-img-3">
                         <img src="./assets/img/nav-icon-3-bottom.svg" alt="" class="sub-nav__icon-img-4">
-                    </div>
-                    <div class="sub-nav__icon sub-nav__icon--2">
+                    </a>
+                    <a href="#subsection-2" class="sub-nav__icon sub-nav__icon--2">
                         <img src="./assets/img/nav-icon-2-grey.png" alt="" class="sub-nav__icon-img-1">
                         <img src="./assets/img/nav-icon-2-color.png" alt="" class="sub-nav__icon-img-2">
                         <img src="./assets/img/nav-icon-2-top.svg" alt="" class="sub-nav__icon-img-3">
                         <img src="./assets/img/nav-icon-2-bottom.svg" alt="" class="sub-nav__icon-img-4">
-                    </div>
-                    <div class="sub-nav__icon sub-nav__icon--3">
+                    </a>
+                    <a href="#subsection-3" class="sub-nav__icon sub-nav__icon--3">
                         <img src="./assets/img/nav-icon-1-grey.png" alt="" class="sub-nav__icon-img-1">
                         <img src="./assets/img/nav-icon-1-color.png" alt="" class="sub-nav__icon-img-2">
                         <img src="./assets/img/nav-icon-1-top.svg" alt="" class="sub-nav__icon-img-3">
                         <img src="./assets/img/nav-icon-1-bottom.svg" alt="" class="sub-nav__icon-img-4">
-                    </div>
+                    </a>
                 </div>
                 <div class="content_width">
                     <h2 class="section__title">Introducing the <nobr>All-in-One</nobr> pharma marketing platform</h2>
                     <h3 class="section__sub-title">The quickest and most precise way of reaching doctors on social media and beyond.</h3>
                     <h4 class="section__pre-title">Major benefits</h4>
-                    <div class="sub__list">
+                    <div class="sub__list  js-float-start">
                         <div class="sub__list-item">
                             <div class="sub__list-icon sub__list-icon--1">
                                 <img src="./assets/img/triangle-1.svg" alt="" class="sub__list-icon--img sub__list-icon--img--1">
@@ -104,11 +104,11 @@
                             <p class="sub__list-text">Self-service dashboards.</p>
                         </div>
                     </div>
-                    <a href="javascript:void(0);" class="demo-btn">Get a demo</a>
+                    <a href="#demo-section" class="demo-btn">Get a demo</a>
                 </div>
             </div>
 
-            <div class="section__sub">
+            <div id="subsection-1" class="section__sub">
                 <div class="content_width">
                     <h2 class="section__title section__title--blue">NPI-level social media reach</h2>
                     <h3 class="section__sub-title section__sub-title--grey">The only solution that offers HCP-level targeting and reporting on Facebook, Instagram and LinkedIn.</h3>
@@ -142,7 +142,7 @@
                 </div>
             </div>
 
-            <div class="section__sub">
+            <div id="subsection-2" class="section__sub">
                 <div class="content_width">
                     <h2 class="section__title section__title--blue">Engaging content</h2>
                     <h3 class="section__sub-title section__sub-title--grey">Engaging doctors is as important as reaching them <nobr>– we have developed</nobr> the most performing branded/unbranded infosites and ads.</h3>
@@ -176,7 +176,7 @@
                 </div>
             </div>
 
-            <div class="section__sub">
+            <div id="subsection-3" class="section__sub">
                 <div class="content_width">
                     <h2 class="section__title section__title--blue">Real-time insights</h2>
                     <h3 class="section__sub-title section__sub-title--grey">It's 2020 – why are you still settling for weekly/monthly reporting? Get your data in real time!</h3>
@@ -212,7 +212,7 @@
 
         </div>
 
-        <div class="section section--2" id="solutions">
+        <div class="section section--2 js-float-end" id="solutions">
             <div class="section__main-sub">
                 <div class="gradient">
                     <img src="./assets/img/gradient-bg.png" alt="" class="gradient__img gradient__img--2">
@@ -232,9 +232,9 @@
                                 <div class="table-1__left">
                                     <div class="table-1__text">By:</div>
                                     <div class="table-1__btns table-1__btns">
-                                        <span class="table-1__btn">Marketing Phase</span>
-                                        <span class="table-1__btn table-1__btn--active">HCP Journey</span>
-                                        <span class="table-1__btn">Objective</span>
+                                        <span class="table-1__btn" data-targetGroup="01">Marketing Phase</span>
+                                        <span class="table-1__btn table-1__btn--active" data-targetGroup="12">HCP Journey</span>
+                                        <span class="table-1__btn" data-targetGroup="2">Objective</span>
                                     </div>
                                 </div>
                                 <div class="table-1__right">
@@ -244,7 +244,7 @@
                             </div>
                             <div class="table-2__wrapp">
                                 <div class="table-2__margin">
-                                    <div class="table-2">
+                                    <div id="variantsTable" class="table-2">
                                         <div class="table-2__head">
                                             <div class="table-2__head-icon">
                                                 <img src="./assets/img/table-icon-1.svg" alt="">
@@ -260,58 +260,58 @@
                                         </div>
                                         <div class="table-2__line">
                                             <p class="table-2__text">Alerts</p>
-                                            <div class="table-2__check">
+                                            <div class="table-2__check" data-group="1">
                                                 <img src="./assets/img/check-blue.svg" alt="">
                                             </div>
-                                            <div class="table-2__check">
+                                            <div class="table-2__check" data-group="1">
                                                 <img src="./assets/img/check-green-blue.svg" alt="">
                                             </div>
-                                            <div class="table-2__check">
+                                            <div class="table-2__check" data-group="0">
                                                 
                                             </div>
-                                            <div class="table-2__check">
+                                            <div class="table-2__check" data-group="0">
                                                 
                                             </div>
-                                            <div class="table-2__check">
+                                            <div class="table-2__check" data-group="1">
                                                 <img src="./assets/img/check-green-blue.svg" alt="">
                                             </div>
-                                            <div class="table-2__check"></div>
+                                            <div class="table-2__check" data-group="1"></div>
                                         </div>
                                         <div class="table-2__line">
                                             <p class="table-2__text">Cases</p>
-                                            <div class="table-2__check">
+                                            <div class="table-2__check" data-group="2">
                                                 <img src="./assets/img/check-green-blue.svg" alt="">
                                             </div>
-                                            <div class="table-2__check">
+                                            <div class="table-2__check" data-group="2">
                                                 <img src="./assets/img/check-green-blue.svg" alt="">
                                             </div>
-                                            <div class="table-2__check">
+                                            <div class="table-2__check" data-group="2">
                                                 <img src="./assets/img/check-green.svg" alt="">
                                             </div>
-                                            <div class="table-2__check">
+                                            <div class="table-2__check" data-group="2">
                                                 <img src="./assets/img/check-green.svg" alt="">
                                             </div>
-                                            <div class="table-2__check">
+                                            <div class="table-2__check" data-group="2">
                                                 <img src="./assets/img/check-green.svg" alt="">
                                             </div>
-                                            <div class="table-2__check"></div>
+                                            <div class="table-2__check" data-group="2"></div>
                                         </div>
                                         <div class="table-2__line">
                                             <p class="table-2__text">Promotion</p>
-                                            <div class="table-2__check">
+                                            <div class="table-2__check" data-group="0">
                                             </div>
-                                            <div class="table-2__check">
+                                            <div class="table-2__check" data-group="1">
                                                 <img src="./assets/img/check-blue.svg" alt="">
                                             </div>
-                                            <div class="table-2__check">
+                                            <div class="table-2__check" data-group="2">
                                                 <img src="./assets/img/check-green-blue.svg" alt="">
                                             </div>
-                                            <div class="table-2__check">
+                                            <div class="table-2__check" data-group="2">
                                                 <img src="./assets/img/check-green-blue.svg" alt="">
                                             </div>
-                                            <div class="table-2__check">
+                                            <div class="table-2__check" data-group="0">
                                             </div>
-                                            <div class="table-2__check"></div>
+                                            <div class="table-2__check" data-group="0"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -399,7 +399,7 @@
             </div>
         </div>
 
-        <div class="section section--6">
+        <div id="demo-section" class="section section--6">
             <div class="section__main-sub">
                 <img src="./assets/img/fig-6.png" alt="" class="fig-6">
                 <img src="./assets/img/fig-7.png" alt="" class="fig-7">
