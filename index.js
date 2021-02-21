@@ -1,5 +1,8 @@
 import ScrollMagic from 'scrollmagic';
 import Table from './table.js';
+import { TweenMax, TimelineMax } from "gsap";
+import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
+ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 import 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js'
 
 $(window).on('load',function(){
@@ -51,7 +54,6 @@ $(window).on('load',function(){
         triggerHook: 0,
         offset: -100
     })
-        // .setPin('.js-float-start') // pins the element for the the scene's duration
         .on('enter', () => {
             subNav.addClass('sub-nav--active');
         })
@@ -74,6 +76,35 @@ $(window).on('load',function(){
             subNav.addClass('sub-nav--active');
         })
         // .addIndicators()
+        .addTo(controller);
+
+
+    // scene
+    new ScrollMagic.Scene({
+        triggerElement: '.js-float-start',
+        triggerHook: 0,
+        offset: -100
+    })
+        .setPin(".sub__list-icon--1")
+        .setTween(".sub__list-icon--1", 0.5, {x: '25vw', y: `${window.innerHeight - 280}`, scale: 0.3})
+        .addTo(controller);
+    // scene
+    new ScrollMagic.Scene({
+        triggerElement: '.js-float-start',
+        triggerHook: 0,
+        offset: -100
+    })
+        .setPin(".sub__list-icon--2")
+        .setTween(".sub__list-icon--2", 0.5, {x:0, y: `${window.innerHeight - 280}`, scale: 0.3})
+        .addTo(controller);
+    // scene
+    new ScrollMagic.Scene({
+        triggerElement: '.js-float-start',
+        triggerHook: 0,
+        offset: -100
+    })
+        .setPin(".sub__list-icon--3")
+        .setTween(".sub__list-icon--3", 0.5, {x: '-25vw', y: `${window.innerHeight - 280}`, scale: 0.3})
         .addTo(controller);
 
 
@@ -141,5 +172,5 @@ $(window).on('load',function(){
         $(this).toggleClass('table-1__btn--active');
         table.selectGroup(target);
     });
-    
+
 });
