@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+.calendly-badge-widget {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -185,6 +190,9 @@ body {
     text-align: center;
     margin-right: 0;
   }
+}
+.main-nav__list-sub.active a {
+  color: #4730D2;
 }
 
 .main-nav__demo-btn {
@@ -925,8 +933,8 @@ body {
   margin-top: 82px;
 }
 .two-column__img--7 {
-  width: 573px;
-  margin-right: -70px;
+  width: 405px;
+  margin-right: 10px;
   margin-top: 53px;
 }
 .two-column__img--8 {

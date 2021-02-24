@@ -42,17 +42,17 @@ $(window).on('load',function(){
     // scroll controller
     let controller = new ScrollMagic.Controller();
 
-    let sections = $('.section');
+    let sections = $('.js-menu-trigger');
     let subSections = $('.section__sub');
-    let mainNavItems = $('.main-nav__list-item');
+    let mainNavItems = $('.js-main-nav-item');
     let subNav = $('.sub-nav');
 
 
     // float scene
     new ScrollMagic.Scene({
         triggerElement: '.js-float-start',
-        triggerHook: 0,
-        offset: -100
+        triggerHook: 0.6,
+        offset: 0
     })
         .on('enter', () => {
             subNav.addClass('sub-nav--active');
