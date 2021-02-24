@@ -79,33 +79,33 @@ $(window).on('load',function(){
         .addTo(controller);
 
 
-    // scene
-    new ScrollMagic.Scene({
-        triggerElement: '.js-float-start',
-        triggerHook: 0,
-        offset: -100
-    })
-        .setPin(".sub__list-icon--1")
-        .setTween(".sub__list-icon--1", 0.5, {x: '25vw', y: `${window.innerHeight - 280}`, scale: 0.3})
-        .addTo(controller);
-    // scene
-    new ScrollMagic.Scene({
-        triggerElement: '.js-float-start',
-        triggerHook: 0,
-        offset: -100
-    })
-        .setPin(".sub__list-icon--2")
-        .setTween(".sub__list-icon--2", 0.5, {x:0, y: `${window.innerHeight - 280}`, scale: 0.3})
-        .addTo(controller);
-    // scene
-    new ScrollMagic.Scene({
-        triggerElement: '.js-float-start',
-        triggerHook: 0,
-        offset: -100
-    })
-        .setPin(".sub__list-icon--3")
-        .setTween(".sub__list-icon--3", 0.5, {x: '-25vw', y: `${window.innerHeight - 280}`, scale: 0.3})
-        .addTo(controller);
+    // // scene
+    // new ScrollMagic.Scene({
+    //     triggerElement: '.js-float-start',
+    //     triggerHook: 0,
+    //     offset: -100
+    // })
+    //     .setPin(".sub__list-icon--1")
+    //     .setTween(".sub__list-icon--1", 0.5, {x: '25vw', y: `${window.innerHeight - 280}`, scale: 0.3})
+    //     .addTo(controller);
+    // // scene
+    // new ScrollMagic.Scene({
+    //     triggerElement: '.js-float-start',
+    //     triggerHook: 0,
+    //     offset: -100
+    // })
+    //     .setPin(".sub__list-icon--2")
+    //     .setTween(".sub__list-icon--2", 0.5, {x:0, y: `${window.innerHeight - 280}`, scale: 0.3})
+    //     .addTo(controller);
+    // // scene
+    // new ScrollMagic.Scene({
+    //     triggerElement: '.js-float-start',
+    //     triggerHook: 0,
+    //     offset: -100
+    // })
+    //     .setPin(".sub__list-icon--3")
+    //     .setTween(".sub__list-icon--3", 0.5, {x: '-25vw', y: `${window.innerHeight - 280}`, scale: 0.3})
+    //     .addTo(controller);
 
 
     // SECTIONS HANDLER
