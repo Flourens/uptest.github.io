@@ -4,3 +4,4 @@ yarn.lock
 .idea
 .vscode
 .parcel-cache
+dist/
