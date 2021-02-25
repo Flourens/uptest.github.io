@@ -1,12 +1,10 @@
 {
-  "name": "select",
-  "version": "1.0",
-  "description": "select",
-  "author": "evgeniy",
-  "license": "MIT",
-  "private": false,
+  "name": "uptest.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "parcel build index.html --no-scope-hoist --dist-dir ./dist",
+    "build": "parcel build index.html",
     "serve": "parcel index.html"
   },
   "devDependencies": {
@@ -17,6 +15,7 @@
     "@parcel/transformer-posthtml": "2.0.0-nightly.598",
     "@parcel/transformer-sass": "2.0.0-nightly.598",
     "parcel": "^2.0.0-beta.1",
+    "parcel-bundler": "^1.12.4",
     "sass": "^1.29.0"
   },
   "dependencies": {
@@ -24,5 +23,12 @@
     "include-media": "^1.4.9",
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugin-gsap": "^1.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-flo:Flourens/uptest.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
