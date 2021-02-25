@@ -216,7 +216,7 @@ body{
     &--defined{
         background-color: #15B743;
         font-size: 17px;
-        padding: 14px 24px 10px 24px;
+        padding: 23px 24px 19px 24px;
         display: block;
         height: 60px;
         pointer-events: none;
@@ -325,13 +325,13 @@ body{
     }
 }
 .hero__title{
-    width: 60%;
-    // max-width: 760px;
+    width: 80%;
+    max-width: 760px;
     height: auto;
-    // margin: 0 auto;
+    margin: 0 auto;
     position: absolute;
-    left: 5%;
-    right: 30%;
+    left: 0;
+    right: 0;
     top: 57%;
     transform: translate(0, -50%);
     @include media ("<phone"){
@@ -670,7 +670,7 @@ body{
     font-style: normal;
     text-align: center;
     color: #fff;
-    font-size: 36px;
+    font-size: 32px;
     line-height: 1.2;
     font-weight: bold;
     margin: 5px 0;
@@ -1912,6 +1912,7 @@ body{
         font-size: 19px;
     }
     @include media ("<phone"){
+        text-align: center;
         &--made{
             display: block;
             width: 100%;
@@ -1927,17 +1928,17 @@ body{
 .footer__col-right{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     max-width: 310px;
     width: 100%;
     @include media ("<=smallTablet"){
         max-width: 250px;
     }
     @include media ("<=phone"){
-        order: 1;
         margin-bottom: 30px;
-        flex-wrap: wrap;
+        flex-direction: column;
         max-width: 100%;
+        text-align: center;
     }
 }
 .footer__nav{
@@ -1945,10 +1946,24 @@ body{
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    line-height: 32px;
+    line-height: 39px;
     color: #1F155B;
     text-decoration: none;
     @include media ("<=smallTablet"){
         font-size: 19px;
     }
+}
+.sociallinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 10px;
+    @include media ("<=phone"){
+        justify-content: center;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+.sociallinks__item{
+    margin-right: 10px;
 }
