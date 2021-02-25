@@ -2,12 +2,11 @@
   "name": "select",
   "version": "1.0",
   "description": "select",
-  "main": "index.js",
-  "author": "ecgeniy",
+  "author": "evgeniy",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --no-scope-hoist --dist-dir ./dist",
     "serve": "parcel index.html"
   },
   "devDependencies": {
