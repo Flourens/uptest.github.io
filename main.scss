@@ -1890,6 +1890,10 @@ body{
     width: 100%;
     padding-top: 94px;
     padding-bottom: 199px;
+    @include media ("<phone"){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 }
 .footer_col{
     display: flex;
@@ -1914,7 +1918,7 @@ body{
     margin: 0;
 
     @include media ("<=smallTablet"){
-        font-size: 19px;
+        font-size: 18px;
     }
     @include media ("<phone"){
         text-align: center;
