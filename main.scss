@@ -42,6 +42,7 @@ body{
         right: 0;
         width: 100%;
         border-radius: 0px;
+        overflow: visible;
     }
 }
 .main-nav{
@@ -52,6 +53,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding-left: 16px;
+    position: relative;
 }
 .main-nav__link{
     color: inherit;
