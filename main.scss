@@ -340,6 +340,10 @@ body{
         width: calc(75% - 40px);
     }
 }
+.defined-text{
+    color: #15B743;
+    font-weight: bold;
+}
 .hero__title-text{
     font-family: 'Kumbh Sans', sans-serif;
     line-height: 1.17;
@@ -353,6 +357,7 @@ body{
         font-size: 52px; 
         font-weight: bold;
         text-shadow: 0px 4px 12px rgba(31, 21, 91, 0.2);
+        text-transform: uppercase;
         @include media ("<phone"){
             font-size: 36px;
         }
@@ -731,7 +736,6 @@ body{
         text-decoration: none;
         display: block;
         padding: 21px 0px 19px 0px;
-        font-size: 28px;
         margin: 0 auto;
         @include media ("<=smallTablet"){
             width: 90%;

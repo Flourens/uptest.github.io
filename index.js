@@ -155,18 +155,26 @@ $(window).on('load',function(){
         );
     })();
 
-    (function initTable() {
-        const newTable = document.querySelector('#variantsTable');
-        const table = new Table(newTable);
-        table.selectGroup([1, 2]);
-    
-        $(".table-1__btn").click(function(e) {
-            e.preventDefault();
-            let target = $(this).attr('data-targetgroup');
-            $(this).toggleClass('table-1__btn--active');
-            table.selectGroup(target);
+    (function initButtons() {
+        $(".intouch-btn-main").click(function() {
+            setButtonsState();
+        });
+        $(".intouch-btn").click(function() {
+            setButtonsState();
         });
     })()
+
+    function setButtonsState() {
+        let newText = 'We’ll be in touch';
+        $(".intouch-btn-main").text(newText);
+        $(".intouch-btn").text(newText);
+
+        $(".intouch-btn-main").removeClass('main-nav__demo-btn--undefined');
+        $(".intouch-btn-main").addClass('main-nav__demo-btn--defined');
+        
+        $(".intouch-btn").removeClass('demo-btn--undefined');
+        $(".intouch-btn").addClass('demo-btn--defined');
+    }
 
     function addActiveSection(id) {
         $(mainNavItems[id]).addClass('active');
@@ -205,5 +213,20 @@ $(window).on('load',function(){
         }
         return false;
     };
+
+    (function initTable() {
+        const newTable = document.querySelector('#variantsTable');
+        if (!newTable) return;
+
+        const table = new Table(newTable);
+        table.selectGroup([1, 2]);
+    
+        $(".table-1__btn").click(function(e) {
+            e.preventDefault();
+            let target = $(this).attr('data-targetgroup');
+            $(this).toggleClass('table-1__btn--active');
+            table.selectGroup(target);
+        });
+    })()
 
 });
