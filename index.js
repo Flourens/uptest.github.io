@@ -15,13 +15,9 @@ $(window).on('load',function(){
     let from = '';
 
     (function processUrl(){
-        from = getUrlParameter('from');
-        if (from === 'agencies') {
-            console.log(from);
-        }
-        if (from === 'pharma') {
-            console.log(from);
-        }
+        let page = getUrlPath();
+        $("body").addClass(page);
+        window.history.pushState("", "", '/');
     })();
 
     (function initNBavigation() {
@@ -213,6 +209,16 @@ $(window).on('load',function(){
         }
         return false;
     };
+
+    function getUrlPath() {
+        if (window.location.href.indexOf("agencies") > -1) {
+            return "agencies"
+        }
+        if (window.location.href.indexOf("pharma") > -1) {
+            return "pharma"
+        }
+        return ""
+    }
 
     (function initTable() {
         const newTable = document.querySelector('#variantsTable');
