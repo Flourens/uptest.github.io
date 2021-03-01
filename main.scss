@@ -1978,3 +1978,24 @@ body{
 .sociallinks__item{
     margin-right: 10px;
 }
+
+.policy-text {
+    font-family: 'Roboto',Arial,sans-serif;
+    font-weight: 300;
+    color: #000;
+    line-height: 1.5;
+
+    width: 90%;
+    max-width: 760px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    @include media ("<=phone"){
+        font-size: 16px;
+        line-height: 1.45;
+    }
+    a{
+        color: #ff8562;
+        text-decoration: none;
+    }
+}
