@@ -730,6 +730,9 @@ body{
             width: 90%;
             max-width: 380px;
         }
+        @include media ("<phone"){
+            font-size: 24px;
+        }
     }
     &--defined{
         background-color: #15B743;
@@ -744,6 +747,9 @@ body{
         @include media ("<=smallTablet"){
             width: 90%;
             max-width: 380px;
+        }
+        @include media ("<phone"){
+            font-size: 24px;
         }
     }
     @include media ("<=smallTablet"){
