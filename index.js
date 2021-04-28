@@ -17,7 +17,7 @@ $(window).on('load',function(){
     (function processUrl(){
         let page = getUrlPath();
         $("body").addClass(page);
-        window.history.pushState("", "", '/');
+        window.history.pushState("", "", "/" + window.location.search);
     })();
 
     (function initNBavigation() {
