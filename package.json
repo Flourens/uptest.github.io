@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build index.html privacy.html d16btmkieb8r5evb0udwa3jf635abn.html",
+    "build": "parcel build index.html privacy.html d16btmkieb8r5evb0udwa3jf635abn.html robots.txt",
     "serve": "parcel index.html"
   },
   "devDependencies": {
