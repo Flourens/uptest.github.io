@@ -16,6 +16,7 @@ $(window).on('load',function(){
 
     (function processUrl(){
         let page = getUrlPath();
+        if (!page) return;
         $("body").addClass(page);
         window.history.pushState("", "", "/" + window.location.search);
     })();
@@ -217,7 +218,7 @@ $(window).on('load',function(){
         if (window.location.href.indexOf("pharma") > -1) {
             return "pharma"
         }
-        return ""
+        return false
     }
 
     (function initTable() {
