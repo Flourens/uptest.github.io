@@ -2007,3 +2007,94 @@ body{
         text-decoration: none;
     }
 }
+
+.article {
+    margin: 2.5em auto 0;
+    font-family: 'SFProText-Regular',sans-serif;
+    font-weight: 400;
+    color: rgba(44,32,48,.6);
+    font-size: 24px;
+    width: 80%;
+    max-width: 950px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    background-color: #fff;
+}
+
+.article__content {
+    max-width: 95rem;
+    padding: 6rem 0 6rem 0;
+    .input {
+        margin-bottom: 1em;
+        width: 100%;
+        input {
+            display: block;
+            width: 100%;
+            font-size: 1em;
+            font-family: 'SFProDisplay-Medium',sans-serif;
+            color: inherit;
+            -webkit-appearance: none;
+            background-color: #fdfdfd;
+            outline: none;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+    }
+    .input__label {
+        display: block;
+        margin-bottom: .5em;
+        line-height: 1;
+    }
+    .input__block {
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+        background-color: #fdfdfd;
+        border: solid 1px #e3e3e3;
+        padding: .625em .875em;
+    }
+    .input--error .input__error_text {
+        display: block;
+    }
+    .input__error_text {
+        display: none;
+        font-size: 1.4rem;
+        font-size: .875em;
+        margin-top: .5rem;
+        color: #e66666;
+    }
+    textarea {
+        width: 100%;
+        height: 300px;
+        resize: none;
+        border: none;
+        color: inherit;
+        font-family: 'SFProDisplay-Medium',sans-serif;
+        font-size: 1em;
+        background-color: #fdfdfd;
+        overflow: auto;
+        outline: none;
+        -webkit-appearance: none;
+    }
+    .btn {
+        text-align: center;
+        padding: 1em;
+        border-radius: 4px;
+        background-color: #5260f9;
+        font-size: 1em;
+        font-family: 'SFProDisplay-Medium',sans-serif;
+        font-weight: 400;
+        color: #fff;
+        line-height: 1;
+        text-decoration: none;
+        outline: none;
+        margin: 0;
+        border: 0;
+        cursor: pointer;
+    }
+    .btn__label{
+        display: inline-block;
+    }
+}   
